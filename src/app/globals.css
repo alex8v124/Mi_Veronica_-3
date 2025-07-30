@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 11%; /* Dark Blue */
+    --foreground: 210 40% 98%;
+    --card: 222 47% 18%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 174 100% 37%; /* Turquoise */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217 33% 25%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 18%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 176 35% 54%; /* Light Teal */
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 25%;
+    --input: 217 33% 22%;
+    --ring: 174 100% 37%;
+    --radius: 0.8rem;
+    --chart-1: 174 100% 37%;
+    --chart-2: 176 35% 54%;
+    --chart-3: 217 50% 50%;
+    --chart-4: 173 70% 40%;
+    --chart-5: 217 80% 75%;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 18%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 174 100% 37%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217 33% 25%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 18%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 176 35% 54%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 25%;
+    --input: 217 33% 22%;
+    --ring: 174 100% 37%;
+    --chart-1: 174 100% 37%;
+    --chart-2: 176 35% 54%;
+    --chart-3: 217 50% 50%;
+    --chart-4: 173 70% 40%;
+    --chart-5: 217 80% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    scroll-behavior: smooth;
+  }
+  section {
+    @apply w-full py-16 md:py-24 lg:py-32 bg-gradient-to-br from-teal-200 to-blue-200 text-gray-800;
+  }
+}
