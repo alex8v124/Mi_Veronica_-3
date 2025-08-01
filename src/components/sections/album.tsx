@@ -9,13 +9,13 @@ import { useEffect, useState } from 'react';
 const initialPhotos = [
   {
     type: 'video',
-    src: 'https://scontent-lim1-1.cdninstagram.com/o1/v/t2/f2/m82/AQOnI5XgP-MvjBNFaZZkFgjKxKTw9_9Gu0z9YbtRxQiDTok1ETIRKnPRz3VBh7X9Q0_HoLMnPl9E5lP8JGf--6Z1PK_20ZOTtogASZA.mp4?_nc_cat=104&_nc_sid=5e9851&_nc_ht=scontent-lim1-1.cdninstagram.com&_nc_ohc=Hjwxdx49LjcQ7kNvwHj5Tyk&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MzIxNzE0NDMwNzM1Mzk2LCJhc3NldF9hZ2VfZGF5cyI6NTgxLCJ2aV91c2VjYXNlX2lkIjoxMDA5OSwiZHVyYXRpb25fcyI6MTIsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=bad78542e3092ad0&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC9CMDQ0MEI4NDVDQzBFMDk3RDkxQjIzNUVCNkVCMjhCNV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HUGRKaUJoeHozVEtseE1KQUR3YlNVMXF6ajhtYnFfRUFBQUYVAgLIARIAKAAYABsCiAd1c2Vfb2lsATEScHJvZ3Jlc3NpdmVfcmVjaXBlATEVAAAmyNDnpZ-mkgEVAigCQzMsF0AozMzMzMzNGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX-B2XmnQEA&_nc_zt=28&oh=00_AfSOLMNGAU2mVbG8yBVJl6qIhphgqmvKgYh06bhjLycVpQ&oe=688A865D',
+    src: 'https://scontent-lim1-1.cdninstagram.com/o1/v/t2/f2/m82/AQOnI5XgP-MvjBNFaZZkFgjKxKTw9_9Gu0z9YbtRxQiDTok1ETIRKnPRz3VBh7X9Q0_HoLMnPl9E5lP8JGf--6Z1PK_20ZOTtogASZA.mp4?_nc_cat=104&_nc_sid=5e9851&_nc_ht=scontent-lim1-1.cdninstagram.com&_nc_ohc=2j81JZq3iSQQ7kNvwHxqcXX&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MzIxNzE0NDMwNzM1Mzk2LCJhc3NldF9hZ2VfZGF5cyI6NTg0LCJ2aV91c2VjYXNlX2lkIjoxMDA5OSwiZHVyYXRpb25fcyI6MTIsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=bad78542e3092ad0&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC9CMDQ0MEI4NDVDQzBFMDk3RDkxQjIzNUVCNkVCMjhCNV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HUGRKaUJoeHozVEtseE1KQUR3YlNVMXF6ajhtYnFfRUFBQUYVAgLIARIAKAAYABsCiAd1c2Vfb2lsATEScHJvZ3Jlc3NpdmVfcmVjaXBlATEVAAAmyNDnpZ-mkgEVAigCQzMsF0AozMzMzMzNGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX-B2XmnQEA&_nc_zt=28&oh=00_AfQLPpwWXOfTCtxrTxLh3ATkJiozalsvQf-tL7bG4vyo0A&oe=688E429D',
     aiHint: 'new video',
-    caption: 'Donde nuestra historia comenzó a escribirse.',
+    caption: 'Mi mejor decisión siempre serás tú.',
   },
   {
     type: 'video',
-    src: 'https://scontent-lim1-1.cdninstagram.com/o1/v/t2/f2/m82/AQMX7D-ORkTx1KeypLhcqSe9EaUriGsXxQJXjVI5QEGoe89OLgds3ZSCA_TTRi-FMtZR1qfJuBUYtdYDEkleCKzQJoc2Lw-LBoWiLj4.mp4?_nc_cat=109&_nc_sid=5e9851&_nc_ht=scontent-lim1-1.cdninstagram.com&_nc_ohc=Ptjl5uj14T8Q7kNvwHeW43t&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTQ1MTgzOTkzOTAwMzk3MiwiYXNzZXRfYWdlX2RheXMiOjY4NiwidmlfdXNlY2FzZV9pZCI6MTAwOTksImR1cmF0aW9uX3MiOjE0LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=f3a11cc68940f8f4&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC9FRTQ1RjU1ODlERUFEOUVDM0YxRTIzN0VDNzgxM0Q4N192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HQWxIalJaUEdCcTBBU1lDQUtLSnJORTFMdVZ3YnFfRUFBQUYVAgLIARIAKAAYABsCiAd1c2Vfb2lsATEScHJvZ3Jlc3NpdmVfcmVjaXBlATEVAAAmiJmuvZqclAUVAigCQzMsF0AtZmZmZmZmGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX-B2XmnQEA&_nc_zt=28&oh=00_AfQv0CpfjlUx8poyaFJHsmBz_7RNjyD5sXNgMI60NGqXcQ&oe=688A834E',
+    src: 'https://scontent-lim1-1.cdninstagram.com/o1/v/t2/f2/m82/AQMoGTAFD4NLpdK7CJDf-_gaRI8GMR8VoCy1wYy5Y4m7uqz0MVIaaiBCKkvctsB7d6XfSryqNTP-D7BcI19893TTByfZHEPxkuqM0AM.mp4?_nc_cat=110&_nc_sid=5e9851&_nc_ht=scontent-lim1-1.cdninstagram.com&_nc_ohc=uXSU-1s_H5QQ7kNvwH9AQFO&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6ODkxNzg0NjM4NDg4MDI5LCJhc3NldF9hZ2VfZGF5cyI6NjQxLCJ2aV91c2VjYXNlX2lkIjoxMDA5OSwiZHVyYXRpb25fcyI6NywidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=bcead806900d372f&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC9ERDQ4RkQ4RkYxMTZERkQ1RUE4OUE0MzQ0OEUxQzNBRV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HRVpkbkJjNHE4SjZ4WFFGQUU0VVhPWlFTMXM2YnFfRUFBQUYVAgLIARIAKAAYABsCiAd1c2Vfb2lsATEScHJvZ3Jlc3NpdmVfcmVjaXBlATEVAAAmuve-qdnElQMVAigCQzMsF0AcEWhysCDFGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX-B2XmnQEA&_nc_zt=28&oh=00_AfTuRM1j5QTsXnk_xLYIAiMKR0iaYy8j7Jyhm4rpWrNiuA&oe=688E5CA3',
     aiHint: 'beautiful woman video',
     caption: 'Cómplices de baile y de vida.',
   },
@@ -33,9 +33,9 @@ const initialPhotos = [
   },
   {
     type: 'video',
-    src: 'https://scontent-lim1-1.cdninstagram.com/o1/v/t2/f2/m82/AQMoGTAFD4NLpdK7CJDf-_gaRI8GMR8VoCy1wYy5Y4m7uqz0MVIaaiBCKkvctsB7d6XfSryqNTP-D7BcI19893TTByfZHEPxkuqM0AM.mp4?_nc_cat=110&_nc_sid=5e9851&_nc_ht=scontent-lim1-1.cdninstagram.com&_nc_ohc=W8nvZYlX07oQ7kNvwG-wFGl&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6ODkxNzg0NjM4NDg4MDI5LCJhc3NldF9hZ2VfZGF5cyI6NjM4LCJ2aV91c2VjYXNlX2lkIjoxMDA5OSwiZHVyYXRpb25fcyI6NywidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=bcead806900d372f&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC9ERDQ4RkQ4RkYxMTZERkQ1RUE4OUE0MzQ0OEUxQzNBRV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HRVpkbkJjNHE4SjZ4WFFGQUU0VVhPWlFTMXM2YnFfRUFBQUYVAgLIARIAKAAYABsCiAd1c2Vfb2lsATEScHJvZ3Jlc3NpdmVfcmVjaXBlATEVAAAmuve-qdnElQMVAigCQzMsF0AcEWhysCDFGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX-B2XmnQEA&_nc_zt=28&oh=00_AfRiV8ELmPVDc59b7iQ9202DrXQX7ebIVOWYbYfUsqP8cA&oe=688A6823',
+    src: 'https://scontent-lim1-1.cdninstagram.com/o1/v/t2/f2/m86/AQPcYBKwchFA4G8NtKXMtDdWjQWIjizpA-mTELhdP-czssm43YISlj-nvtoBcoppuuAbGwQof_dkfgYFlTsGOHOexYhY_LKdq7xxqvk.mp4?_nc_cat=110&_nc_sid=5e9851&_nc_ht=scontent-lim1-1.cdninstagram.com&_nc_ohc=LREpwxmu1QoQ7kNvwGDZc85&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTIzNzI0OTUxNDQ2OTQ3OSwidmlfdXNlY2FzZV9pZCI6MTAwOTksImR1cmF0aW9uX3MiOjE1LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=e5df5e59dee83c1f&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC85NDRCRTM0MDIwMTMyODg4MDI5OTg5NEQ5MTkwNzdBM192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HQVdQU0IxbXNtY0ZsdHNDQUt4NGNXeXV4QmxGYnFfRUFBQUYVAgLIARIAKAAYABsCiAd1c2Vfb2lsATEScHJvZ3Jlc3NpdmVfcmVjaXBlATEVAAAmzuH3nLPRsgQVAigCQzMsF0At-VgQYk3TGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX-B2XmnQEA&_nc_zt=28&oh=00_AfRKlLPW-64ahClECJonMzK0q_JTquPhLfm2PlYuIJNfHA&oe=688E5CE7',
     aiHint: 'happy woman video',
-    caption: 'Siempre tú, siempre nosotros.',
+    caption: 'Tu risa me arregla el alma.',
   },
   {
     type: 'image',
@@ -63,7 +63,7 @@ const initialPhotos = [
   },
   {
     type: 'video',
-    src: 'https://scontent-lim1-1.cdninstagram.com/o1/v/t2/f2/m86/AQPcYBKwchFA4G8NtKXMtDdWjQWIjizpA-mTELhdP-czssm43YISlj-nvtoBcoppuuAbGwQof_dkfgYFlTsGOHOexYhY_LKdq7xxqvk.mp4?_nc_cat=110&_nc_sid=5e9851&_nc_ht=scontent-lim1-1.cdninstagram.com&_nc_ohc=3Ocx_5NYU2wQ7kNvwHIoZUx&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTIzNzI0OTUxNDQ2OTQ3OSwidmlfdXNlY2FzZV9pZCI6MTAwOTksImR1cmF0aW9uX3MiOjE1LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=e5df5e59dee83c1f&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC85NDRCRTM0MDIwMTMyODg4MDI5OTg5NEQ5MTkwNzdBM192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HQVdQU0IxbXNtY0ZsdHNDQUt4NGNXeXV4QmxGYnFfRUFBQUYVAgLIARIAKAAYABsCiAd1c2Vfb2lsATEScHJvZ3Jlc3NpdmVfcmVjaXBlATEVAAAmzuH3nLPRsgQVAigCQzMsF0At-VgQYk3TGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX-B2XmnQEA&_nc_zt=28&oh=00_AfQLPr9gUIIr_7nZhH2QuGC4UoNJRe2Aumar4BmQY__Pcg&oe=688A6867',
+    src: 'https://scontent-lim1-1.cdninstagram.com/o1/v/t2/f2/m82/AQMX7D-ORkTx1KeypLhcqSe9EaUriGsXxQJXjVI5QEGoe89OLgds3ZSCA_TTRi-FMtZR1qfJuBUYtdYDEkleCKzQJoc2Lw-LBoWiLj4.mp4?_nc_cat=109&_nc_sid=5e9851&_nc_ht=scontent-lim1-1.cdninstagram.com&_nc_ohc=oy3yJjTBHXYQ7kNvwFCAuaE&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTQ1MTgzOTkzOTAwMzk3MiwiYXNzZXRfYWdlX2RheXMiOjY4OSwidmlfdXNlY2FzZV9pZCI6MTAwOTksImR1cmF0aW9uX3MiOjE0LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=f3a11cc68940f8f4&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC9FRTQ1RjU1ODlERUFEOUVDM0YxRTIzN0VDNzgxM0Q4N192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HQWxIalJaUEdCcTBBU1lDQUtLSnJORTFMdVZ3YnFfRUFBQUYVAgLIARIAKAAYABsCiAd1c2Vfb2lsATEScHJvZ3Jlc3NpdmVfcmVjaXBlATEVAAAmiJmuvZqclAUVAigCQzMsF0AtZmZmZmZmGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX-B2XmnQEA&_nc_zt=28&oh=00_AfRrZbbhH0O0F59UbjdMU2Q0OhrODVHkyEVK1k4fMPKHZA&oe=688E77CE',
     aiHint: 'happy woman video',
     caption: 'Cada instante contigo es un tesoro.',
   },
@@ -71,7 +71,7 @@ const initialPhotos = [
     type: 'video',
     src: '/TikVid.io_7288910305818823941-hd.mp4',
     aiHint: 'tiktok video',
-    caption: 'Momentos únicos que solo tú y yo entendemos.',
+    caption: 'Eres mi momento favorito del día.',
   },
    {
     type: 'image',
