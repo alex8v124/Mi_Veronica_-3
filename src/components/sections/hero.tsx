@@ -9,7 +9,7 @@ export default function HeroSection() {
     <section id="hero" className="relative w-full h-screen min-h-[600px] flex items-center justify-center text-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://scontent-lim1-1.cdninstagram.com/v/t51.29350-15/505407565_1758928354712793_8231036581651407785_n.heic?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjE0NDB4MTQ0MC5zZHIuZjI5MzUwLmRlZmF1bHRfaW1hZ2UuYzIifQ&_nc_ht=scontent-lim1-1.cdninstagram.com&_nc_cat=109&_nc_oc=Q6cZ2QH9hl6YiAVJKkco3f7yDg5S8PmDXCTT9xk873wECIpMcoTjJYjqJLQrMOZiia5o_is&_nc_ohc=YtkHedb3Nm8Q7kNvwENCqba&_nc_gid=hKImbl0ud7Av_RckPZ1eVQ&edm=AP4sbd4BAAAA&ccb=7-5&ig_cache_key=MzY2MTAyMzQ0OTg4Mjc2NzgwMQ%3D%3D.3-ccb7-5&oh=00_AfTip3UDo7GLD5yJs8kLCY8J1s0gtjeKSunnGjE3Gds4TQ&oe=688E6743&_nc_sid=7a9f4b"
+          src="/Img-princ-vero.jpg"
           alt="Pareja mirandose"
           data-ai-hint="couple sunset"
           fill
