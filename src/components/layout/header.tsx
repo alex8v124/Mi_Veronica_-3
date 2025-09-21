@@ -9,6 +9,7 @@ import Image from 'next/image';
 
 const navLinks = [
   { href: '/qualities', label: 'Lo que Amo' },
+  { href: '/sunflower', label: 'Para tí' },
   { href: '/album', label: 'Álbum' },
   { href: '/playlist', label: 'Playlist' },
   { href: '/letter', label: 'Carta' },
